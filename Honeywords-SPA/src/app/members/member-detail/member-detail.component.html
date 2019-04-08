@@ -1,0 +1,135 @@
+<div class="container mt-4">
+  <div class="row">
+    <h1>{{ user.knownAs }}'s Profile</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <img
+          class="card-img-top img-thumbnail"
+          src="{{ user.photoUrl || '../../../assets/user.png' }}"
+          alt="{{ user.knownAs }}"
+        />
+        <div class="card-body">
+          <div>
+            <strong>Name:</strong>
+            <p>{{ user.firstName }} {{ user.lastName }}</p>
+          </div>
+          <div>
+            <strong>Address:</strong>
+            <p>street<br>{{user.city}}<br>{{user.country}}</p>
+          </div>
+          <div>
+            <strong>Email:</strong>
+            <p>email@host</p>
+          </div>
+          <div>
+            <strong>Phone Number:</strong>
+            <p>number goes here</p>
+          </div>
+          <!-- <div>
+            <div>
+              <strong>Phone Number:</strong>
+              <p>{{ user.city }}, {{ user.country }}</p>
+            </div>
+            <strong>Location:</strong>
+            <p>{{ user.city }}, {{ user.country }}</p>
+          </div>
+          <div>
+            <strong>Age:</strong>
+            <p>{{ user.age }}</p>
+          </div>
+          <div>
+            <strong>Last Active:</strong>
+            <p>{{ user.lastActive }}</p>
+          </div>
+          <div>
+            <strong>Member since:</strong>
+            <p>{{ user.created }}</p>
+          </div> -->
+        </div>
+        <div class="card-footer">
+          <div class="btn-group d-flex">
+            <button class="btn btn-primary w-100">Like</button>
+            <button class="btn btn-success w-100">Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="tab-panel">
+        <tabset class="member-tabset">
+          <tab heading="About {{ user.knownAs }}">
+            <h6>Student's Status:</h6>
+            <h6>Student ID:</h6>
+            <h6>First Name:</h6>
+            <p>{{ user.firstName }}</p>
+            <h6>Middle Name:</h6>
+            <p>{{ user.middleName || "none" }}</p>
+            <h6>Last Name:</h6>
+            <p>{{ user.lastName }}</p>
+            <h6>CS Degree Program:</h6>
+            <h6>Current Program:</h6>
+            <h6>Current Academic Level:</h6>
+            <h6>Email:</h6>
+            <h6>Phone Number 1:</h6>
+            <h6>Phone Number 2:</h6>
+            <!-- <p>{{user.introduction}}</p>
+            <h4>Looking For</h4>
+            <p>{{user.lookingFor}}</p> -->
+          </tab>
+          <tab heading="Bachelor Details">
+            <!-- <h4>Interests</h4>
+            <p>{{user.interests}}</p> -->
+            <h6>Start Date:</h6>
+            <h6>Faculty Mentor:</h6>
+            <h6>Senior Project Advisor:</h6>
+            <h6>Senior Thesis Advisor:</h6>
+            <h6>Senior Project Title:</h6>
+            <h6>Senior Thesis Title:</h6>
+            <h6>BA/BS Graduation Date:</h6>
+          </tab>
+          <tab heading="Master Details">
+            <h6>Master's Focus:</h6>
+            <h6>Start Date:</h6>
+            <h6>Master Project Advisor:</h6>
+            <h6>Master Thesis Advisor:</h6>
+            <h6>Committee Member 1:</h6>
+            <h6>Committee Member 2:</h6>
+            <h6>Committee Member 3:</h6>
+            <h6>Committee Member 4:</h6>
+            <h6>Committee Member 5:</h6>
+            <h6>Committee Formed Date:</h6>
+            <h6>MS Defense Date:</h6>
+            <h6>Project Title:</h6>
+            <h6>Thesis Title:</h6>
+            <h6>MS Graduation Date:</h6>
+          </tab>
+          <tab heading="PhD Details">
+            <h6>Doctoral Candidate:</h6>
+            <h6>Start Date:</h6>
+            <h6>Date Accepted for Candidacy:</h6>
+            <h6>Advisor:</h6>
+            <h6>External Advisor:</h6>
+            <h6>Committee Member 1:</h6>
+            <h6>Committee Member 2:</h6>
+            <h6>Committee Member 3:</h6>
+            <h6>Committee Member 4:</h6>
+            <h6>Committee Member 5:</h6>
+            <h6>Committee Member 6:</h6>
+            <h6>Dissertation Defense Date:</h6>
+            <h6>Dissertation Title:</h6>
+            <h6>Dissertation:</h6>
+            <h6>PhD Graduation Date:</h6>
+          </tab>
+          <tab heading="Photos">
+            <ngx-gallery
+              [options]="galleryOptions"
+              [images]="galleryImages"
+            ></ngx-gallery>
+          </tab>
+        </tabset>
+      </div>
+    </div>
+  </div>
+</div>

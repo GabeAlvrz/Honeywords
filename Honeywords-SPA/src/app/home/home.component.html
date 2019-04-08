@@ -1,0 +1,21 @@
+<div class="container mt-5">
+    <div *ngIf="!registerMode" style="text-align: center">
+      <h1>Welcome to CS Student Information Management System</h1>
+      <p class="lead">Developed by team ZFG</p>
+      <img src="assets/image/logo.jpg" class="mb-4 rounded" alt="logo" width="220" height="220">
+      <!-- <div class="text-center">
+        Description
+      </div> -->
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">Register</button>
+      </div>
+    </div>
+  
+    <div *ngIf="registerMode" class="container">
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+        </div>
+      </div>
+    </div>
+  </div>
